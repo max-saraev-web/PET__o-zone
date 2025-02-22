@@ -6,7 +6,8 @@
     "start": "set NODE_ENV=development&&webpack serve --open",
     "dev": "set NODE_ENV=development&&webpack",
     "build": "set NODE_ENV=production&&webpack",
-    "clear": "rd /s /q dist"
+    "clear": "rd /s /q dist",
+    "jsonServer": "json-server --watch src/db/db.json"
   },
   "repository": {
     "type": "git",
