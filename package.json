@@ -14,9 +14,9 @@
     "url": "git+https://github.com/max-saraev-web/PET__o-zone.git"
   },
   "browserslist": [
-  ">0.2%",
-  "not dead",
-  "not op_mini all"
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
   ],
   "keywords": [],
   "author": "",
@@ -39,6 +39,7 @@
     "postcss-preset-env": "^9.3.0",
     "sass": "^1.70.0",
     "sass-loader": "^16.0.4",
+    "terser-webpack-plugin": "^5.3.11",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"

@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
 const target = mode === 'development' ? 'web' : 'browserslist';
@@ -55,6 +56,10 @@ module.exports = {
       },
     ],
   },
+  optimization: mode === 'production' ? {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  } : {},
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
