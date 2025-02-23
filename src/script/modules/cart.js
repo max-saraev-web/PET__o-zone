@@ -56,7 +56,6 @@ const cart = () => {
     const target = ev.target;
     if (target.matches('.btn-primary')) {
       const id = target.closest('.card').dataset.id;
-      console.log(id);
 
       const cart = JSON.parse(localStorage.getItem('cart'));
       const toDel = cart.findIndex(elem => elem.id === id);
@@ -76,7 +75,6 @@ const cart = () => {
 
   cartConfirm.addEventListener('click', ev => {
     const target = ev.target;
-    console.log(target);
     const cart =
       localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) :
         [];

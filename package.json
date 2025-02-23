@@ -13,6 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/max-saraev-web/PET__o-zone.git"
   },
+  "browserslist": [
+  ">0.2%",
+  "not dead",
+  "not op_mini all"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

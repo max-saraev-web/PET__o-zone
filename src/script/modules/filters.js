@@ -1,5 +1,9 @@
-export const searchFilter = (goods, value) => goods.filter(item => item.title.toLowerCase()
-.includes(toLowerCase(value)));
+export const searchFilter = (goods, value) => {
+  const val = value.toLowerCase();
+  return goods.filter(item => {
+    return item.title.toLowerCase().includes(val);
+  })
+};
 
 export const categoryFilter = (goods, value) => goods.filter(item => item.category.includes(value));
 

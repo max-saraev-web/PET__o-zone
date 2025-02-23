@@ -4,7 +4,6 @@ const debounceTime = val => {
   return val => {
     clearTimeout(timerId);
     timerId = setTimeout(() => {
-    console.log(val);
   }, 2500
   );
   }
