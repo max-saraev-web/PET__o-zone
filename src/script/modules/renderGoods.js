@@ -2,12 +2,14 @@ const renderGoods = goods => {
 
 const goodsWrap = document.querySelector('.goods');
 
+localStorage.setItem('goods', JSON.stringify(goods));
+
 goodsWrap.innerHTML = '';
 
-for (const {sale, title, img, price} of goods) {
+for (const {sale, title, img, price, id} of goods) {
     goodsWrap.insertAdjacentHTML('beforeend', `
       <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="card">
+        <div class="card" data-id="${id}">
           ${sale ? '<div class="card-sale">🔥Hot Sale🔥</div>' : ''}
           <div class="card-img-wrapper">
             <span class="card-img-top"
